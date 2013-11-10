@@ -1,14 +1,18 @@
+<%= image_tag("twitter-dead-bird-small.jpg", :class => "style_image", :alt => "Bird") %>
 <h1>Pretend Twitter</h1>
 <p>Better than real Twitter!</p>
 <hr />
 </br>
+<!-- <p class="error">Tweet length must be 1 to 140 characters long!</p> -->
 <%= form_for @tweet do |form| %>
 <%= form.text_field :status %>
 <%= form.submit %>
 <% end %>
 
 <h2>Recent Tweets:</h2>
+<div id="tweets">
 <% @tweets.each do |tweet| %>
 	<p><%= tweet.status %></p>
 <% end %>
+</div>
 
