@@ -1,0 +1,14 @@
+<h1>Pretend Twitter</h1>
+<p>Better than real Twitter!</p>
+<hr />
+</br>
+<%= form_for @tweet do |form| %>
+<%= form.text_field :status %>
+<%= form.submit %>
+<% end %>
+
+<h2>Recent Tweets:</h2>
+<% @tweets.each do |tweet| %>
+	<p><%= tweet.status %></p>
+<% end %>
+
